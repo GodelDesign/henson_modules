@@ -8,6 +8,9 @@ function henson_global_ctools_plugin_api() {
   if ($module == "feeds" && $api == "feeds_importer_default") {
     return array("version" => 1);
   }
+  elseif ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => 1);
+  }
 }
 
 /**
@@ -20,11 +23,11 @@ function henson_global_imagecache_default_presets() {
       'actions' => array(
         '0' => array(
           'weight' => '0',
-          'module' => 'imagecache',
-          'action' => 'imagecache_scale',
+          'module' => 'smartcrop',
+          'action' => 'smartcrop_scale_and_crop',
           'data' => array(
-            'width' => '170',
-            'height' => '100%',
+            'width' => '170px',
+            'height' => '130px',
             'upscale' => 1,
           ),
         ),
@@ -71,6 +74,45 @@ function henson_global_imagecache_default_presets() {
             'width' => '922',
             'height' => '800',
             'upscale' => 1,
+          ),
+        ),
+      ),
+    ),
+    'campaign_slideshow' => array(
+      'presetname' => 'campaign_slideshow',
+      'actions' => array(
+        '0' => array(
+          'weight' => '0',
+          'module' => 'smartcrop',
+          'action' => 'smartcrop_scale_and_crop',
+          'data' => array(
+            'width' => '960',
+            'height' => '520',
+            'upscale' => 1,
+          ),
+        ),
+      ),
+    ),
+    'store_square' => array(
+      'presetname' => 'store_square',
+      'actions' => array(
+        '0' => array(
+          'weight' => '-10',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale',
+          'data' => array(
+            'width' => 'auto',
+            'height' => '200px',
+            'upscale' => 0,
+          ),
+        ),
+        '1' => array(
+          'weight' => '-9',
+          'module' => 'smartcrop',
+          'action' => 'smartcrop_crop',
+          'data' => array(
+            'width' => '175px',
+            'height' => '200px',
           ),
         ),
       ),
@@ -169,6 +211,92 @@ function henson_global_node_info() {
       'title_label' => t('Title'),
       'has_body' => '1',
       'body_label' => t('Body'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+  );
+  return $items;
+}
+
+/**
+ * Implementation of hook_uc_product_default_classes().
+ */
+function henson_global_uc_product_default_classes() {
+  $items = array(
+    'product' => array(
+      'name' => t('Product'),
+      'module' => 'uc_product',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'has_body' => '1',
+      'body_label' => t('Body'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+    'product_cass_wallets' => array(
+      'name' => t('Wallets'),
+      'module' => 'uc_product',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'has_body' => '1',
+      'body_label' => t('Description'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+    'product_class_bags' => array(
+      'name' => t('Bags'),
+      'module' => 'uc_product',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'has_body' => '1',
+      'body_label' => t('Description'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+    'product_class_cuffs' => array(
+      'name' => t('Cuffs'),
+      'module' => 'uc_product',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'has_body' => '1',
+      'body_label' => t('Description'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+    'product_class_earrings' => array(
+      'name' => t('Earrings'),
+      'module' => 'uc_product',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'has_body' => '1',
+      'body_label' => t('Description'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+    'product_class_neckpieces' => array(
+      'name' => t('Necklaces'),
+      'module' => 'uc_product',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'has_body' => '1',
+      'body_label' => t('Description'),
+      'min_word_count' => '0',
+      'help' => '',
+    ),
+    'product_class_rings' => array(
+      'name' => t('Rings'),
+      'module' => 'uc_product',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Name'),
+      'has_body' => '1',
+      'body_label' => t('Description'),
       'min_word_count' => '0',
       'help' => '',
     ),
