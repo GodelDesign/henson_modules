@@ -83,12 +83,11 @@ function henson_global_imagecache_default_presets() {
       'actions' => array(
         '0' => array(
           'weight' => '0',
-          'module' => 'smartcrop',
-          'action' => 'smartcrop_scale_and_crop',
+          'module' => 'imagecache',
+          'action' => 'imagecache_scale_and_crop',
           'data' => array(
-            'width' => '960',
-            'height' => '520',
-            'upscale' => 1,
+            'width' => '960px',
+            'height' => '520px',
           ),
         ),
       ),

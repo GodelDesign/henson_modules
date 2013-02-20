@@ -9,6 +9,13 @@ function henson_global_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'admin_theme';
+  $strongarm->value = 'rubik';
+  $export['admin_theme'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_backgrounds_static';
   $strongarm->value = 0;
   $export['comment_anonymous_backgrounds_static'] = $strongarm;
@@ -465,6 +472,50 @@ function henson_global_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'content_extra_weights_product_cass_wallets';
+  $strongarm->value = array(
+    'title' => '-5',
+    'body_field' => '-4',
+    'revision_information' => '20',
+    'author' => '20',
+    'options' => '25',
+    'comment_settings' => '30',
+    'menu' => '0',
+    'taxonomy' => '-3',
+    'path' => '30',
+    'path_redirect' => '30',
+    'xmlsitemap' => '30',
+    'shipping' => '0',
+    'base' => '-1',
+    'body' => '1',
+  );
+  $export['content_extra_weights_product_cass_wallets'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'content_extra_weights_product_class_bags';
+  $strongarm->value = array(
+    'title' => '-5',
+    'body_field' => '-4',
+    'revision_information' => '20',
+    'author' => '20',
+    'options' => '25',
+    'comment_settings' => '30',
+    'menu' => '0',
+    'taxonomy' => '-3',
+    'path' => '30',
+    'path_redirect' => '30',
+    'xmlsitemap' => '30',
+    'shipping' => '0',
+    'base' => '-1',
+    'body' => '1',
+  );
+  $export['content_extra_weights_product_class_bags'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'content_extra_weights_product_class_cuffs';
   $strongarm->value = array(
     'title' => '-5',
@@ -753,6 +804,942 @@ function henson_global_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_product_cass_wallets_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Name',
+    ),
+    'body_field' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Menu settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Revision information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'Comment settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Publishing options',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'Authoring information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'buttons' => array(
+      'region' => 'main',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'base' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => TRUE,
+      'title' => 'Product information',
+      'collapsed' => 0,
+    ),
+    'taxonomy' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => NULL,
+    ),
+    'field_image_cache' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Image',
+      'hidden' => 0,
+    ),
+    'field_integer_weight' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Weight (for sorting)',
+    ),
+    'field_view_display' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => TRUE,
+      'title' => 'View Display',
+    ),
+    'xmlsitemap' => array(
+      'region' => 'right',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => 'XML sitemap',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'shipping' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Shipping settings',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+  );
+  $export['nodeformscols_field_placements_product_cass_wallets_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_product_class_bags_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Name',
+    ),
+    'body_field' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Menu settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Revision information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => 'Comment settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Publishing options',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'Authoring information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'buttons' => array(
+      'region' => 'main',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'base' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => TRUE,
+      'title' => 'Product information',
+      'collapsed' => 0,
+    ),
+    'taxonomy' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => NULL,
+    ),
+    'field_image_cache' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Image',
+      'hidden' => 0,
+    ),
+    'field_integer_weight' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Weight (for sorting)',
+    ),
+    'field_view_display' => array(
+      'region' => 'main',
+      'weight' => '5',
+      'has_required' => TRUE,
+      'title' => 'View Display',
+    ),
+    'xmlsitemap' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'XML sitemap',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'shipping' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Shipping settings',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+  );
+  $export['nodeformscols_field_placements_product_class_bags_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_product_class_cuffs_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '-5',
+      'has_required' => TRUE,
+      'title' => 'Name',
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Menu settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Revision information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => 'Comment settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Publishing options',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Authoring information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'buttons' => array(
+      'region' => 'main',
+      'weight' => '100',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'base' => array(
+      'region' => 'main',
+      'weight' => '-1',
+      'has_required' => TRUE,
+      'title' => 'Product information',
+      'collapsed' => 0,
+    ),
+    'field_image_cache' => array(
+      'region' => 'main',
+      'weight' => '-2',
+      'has_required' => FALSE,
+      'title' => 'Image',
+      'hidden' => 0,
+    ),
+    'field_integer_weight' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Weight (for sorting)',
+    ),
+    'shipping' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Shipping settings',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'xmlsitemap' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'XML sitemap',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'taxonomy' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => NULL,
+    ),
+    'field_view_display' => array(
+      'region' => 'main',
+      'weight' => '33',
+      'has_required' => TRUE,
+      'title' => 'View Display',
+      'hidden' => 0,
+    ),
+    'body_field' => array(
+      'region' => 'main',
+      'weight' => '-4',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+  );
+  $export['nodeformscols_field_placements_product_class_cuffs_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_product_class_earrings_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Name',
+    ),
+    'body_field' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Menu settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Revision information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => 'Comment settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Publishing options',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Authoring information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'buttons' => array(
+      'region' => 'main',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'base' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => TRUE,
+      'title' => 'Product information',
+      'collapsed' => 0,
+    ),
+    'taxonomy' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => NULL,
+    ),
+    'field_image_cache' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Image',
+      'hidden' => 0,
+    ),
+    'field_integer_weight' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Weight (for sorting)',
+    ),
+    'field_view_display' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => TRUE,
+      'title' => 'View Display',
+    ),
+    'shipping' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Shipping settings',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'xmlsitemap' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'XML sitemap',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+  );
+  $export['nodeformscols_field_placements_product_class_earrings_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_product_class_neckpieces_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Name',
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Menu settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Revision information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => 'Comment settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Publishing options',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Authoring information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'buttons' => array(
+      'region' => 'main',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'base' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => TRUE,
+      'title' => 'Product information',
+      'collapsed' => 0,
+    ),
+    'taxonomy' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => NULL,
+    ),
+    'field_image_cache' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Image',
+      'hidden' => 0,
+    ),
+    'field_integer_weight' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Weight (for sorting)',
+    ),
+    'shipping' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Shipping settings',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'xmlsitemap' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'XML sitemap',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'body_field' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'field_view_display' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => TRUE,
+      'title' => 'View Display',
+    ),
+  );
+  $export['nodeformscols_field_placements_product_class_neckpieces_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_product_class_rings_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => 'Name',
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'Menu settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Revision information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '9',
+      'has_required' => FALSE,
+      'title' => 'Comment settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '8',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Publishing options',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'Authoring information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'buttons' => array(
+      'region' => 'main',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'base' => array(
+      'region' => 'main',
+      'weight' => '3',
+      'has_required' => TRUE,
+      'title' => 'Product information',
+      'collapsed' => 0,
+    ),
+    'field_image_cache' => array(
+      'region' => 'main',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Images',
+      'hidden' => 0,
+    ),
+    'shipping' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Shipping settings',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'xmlsitemap' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'XML sitemap',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'taxonomy' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => NULL,
+    ),
+    'field_integer_weight' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => TRUE,
+      'title' => 'Weight (for sorting)',
+    ),
+    'body_field' => array(
+      'region' => 'main',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'field_view_display' => array(
+      'region' => 'main',
+      'weight' => '4',
+      'has_required' => TRUE,
+      'title' => 'View Display',
+    ),
+  );
+  $export['nodeformscols_field_placements_product_class_rings_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_stockists_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '-5',
+      'has_required' => TRUE,
+      'title' => 'Title',
+    ),
+    'body_field' => array(
+      'region' => 'main',
+      'weight' => '0.008',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 1,
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '-2',
+      'has_required' => FALSE,
+      'title' => 'Menu settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '20',
+      'has_required' => FALSE,
+      'title' => 'Revision information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '30',
+      'has_required' => FALSE,
+      'title' => 'Comment settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '30',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '25',
+      'has_required' => FALSE,
+      'title' => 'Publishing options',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '20',
+      'has_required' => FALSE,
+      'title' => 'Authoring information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'buttons' => array(
+      'region' => 'main',
+      'weight' => '100',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'taxonomy' => array(
+      'region' => 'main',
+      'weight' => '-3',
+      'has_required' => TRUE,
+      'title' => NULL,
+    ),
+    'field_link_stockist' => array(
+      'region' => 'main',
+      'weight' => '6',
+      'has_required' => TRUE,
+      'title' => 'Stockist link',
+    ),
+    'field_text_cities' => array(
+      'region' => 'main',
+      'weight' => '7',
+      'has_required' => TRUE,
+      'title' => 'Cities / Online',
+    ),
+    'xmlsitemap' => array(
+      'region' => 'main',
+      'weight' => '30',
+      'has_required' => FALSE,
+      'title' => 'XML sitemap',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+  );
+  $export['nodeformscols_field_placements_stockists_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'nodeformscols_field_placements_vibe_images_default';
+  $strongarm->value = array(
+    'title' => array(
+      'region' => 'main',
+      'weight' => '-5',
+      'has_required' => TRUE,
+      'title' => 'Title',
+    ),
+    'menu' => array(
+      'region' => 'right',
+      'weight' => '1',
+      'has_required' => FALSE,
+      'title' => 'Menu settings',
+      'collapsed' => 0,
+      'hidden' => 0,
+    ),
+    'revision_information' => array(
+      'region' => 'right',
+      'weight' => '3',
+      'has_required' => FALSE,
+      'title' => 'Revision information',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'comment_settings' => array(
+      'region' => 'right',
+      'weight' => '7',
+      'has_required' => FALSE,
+      'title' => 'Comment settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'path' => array(
+      'region' => 'right',
+      'weight' => '6',
+      'has_required' => FALSE,
+      'title' => 'URL path settings',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+    'options' => array(
+      'region' => 'right',
+      'weight' => '5',
+      'has_required' => FALSE,
+      'title' => 'Publishing options',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'author' => array(
+      'region' => 'right',
+      'weight' => '2',
+      'has_required' => FALSE,
+      'title' => 'Authoring information',
+      'collapsed' => 1,
+      'hidden' => 0,
+    ),
+    'buttons' => array(
+      'region' => 'main',
+      'weight' => '100',
+      'has_required' => FALSE,
+      'title' => NULL,
+      'hidden' => 0,
+    ),
+    'taxonomy' => array(
+      'region' => 'right',
+      'weight' => '0',
+      'has_required' => TRUE,
+      'title' => NULL,
+    ),
+    'field_image' => array(
+      'region' => 'main',
+      'weight' => '31',
+      'has_required' => TRUE,
+      'title' => 'Images',
+    ),
+    'xmlsitemap' => array(
+      'region' => 'right',
+      'weight' => '4',
+      'has_required' => FALSE,
+      'title' => 'XML sitemap',
+      'collapsed' => 1,
+      'hidden' => 1,
+    ),
+  );
+  $export['nodeformscols_field_placements_vibe_images_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_options_backgrounds_static';
   $strongarm->value = array(
     0 => 'status',
@@ -818,6 +1805,81 @@ function henson_global_strongarm() {
     1 => 'promote',
   );
   $export['node_options_vibe_images'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'theme_default';
+  $strongarm->value = 'henson';
+  $export['theme_default'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'theme_henson_settings';
+  $strongarm->value = array(
+    'zen_block_editing' => 0,
+    'zen_breadcrumb' => 'no',
+    'zen_breadcrumb_separator' => ' › ',
+    'zen_breadcrumb_home' => 1,
+    'zen_breadcrumb_trailing' => 1,
+    'zen_breadcrumb_title' => 0,
+    'zen_rebuild_registry' => 0,
+    'zen_wireframes' => 0,
+    'toggle_logo' => 1,
+    'toggle_name' => 1,
+    'toggle_slogan' => 0,
+    'toggle_mission' => 1,
+    'toggle_node_user_picture' => 0,
+    'toggle_comment_user_picture' => 0,
+    'toggle_search' => 0,
+    'toggle_favicon' => 1,
+    'toggle_primary_links' => 0,
+    'toggle_secondary_links' => 0,
+    'default_logo' => 0,
+    'logo_path' => 'sites/default/files/logosmall.png',
+    'logo_upload' => '',
+    'default_favicon' => 0,
+    'favicon_path' => 'sites/default/files/henson_favicon_3.ico',
+    'favicon_upload' => '',
+    'henson_debug' => 0,
+  );
+  $export['theme_henson_settings'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'theme_settings';
+  $strongarm->value = array(
+    'toggle_logo' => 1,
+    'toggle_name' => 1,
+    'toggle_slogan' => 0,
+    'toggle_mission' => 1,
+    'toggle_node_user_picture' => 0,
+    'toggle_comment_user_picture' => 0,
+    'toggle_search' => 0,
+    'toggle_favicon' => 1,
+    'toggle_primary_links' => 1,
+    'toggle_secondary_links' => 1,
+    'toggle_node_info_vibe_images' => 1,
+    'toggle_node_info_blog' => 1,
+    'toggle_node_info_product_class_cuffs' => 1,
+    'toggle_node_info_product_class_earrings' => 1,
+    'toggle_node_info_faq' => 1,
+    'toggle_node_info_facebook_feed' => 1,
+    'toggle_node_info_product_class_neckpieces' => 1,
+    'toggle_node_info_page' => 0,
+    'toggle_node_info_product' => 1,
+    'toggle_node_info_product_class_rings' => 1,
+    'toggle_node_info_webform' => 1,
+    'default_logo' => 0,
+    'logo_path' => 'sites/default/files/logo.png',
+    'logo_upload' => '',
+    'default_favicon' => 1,
+    'favicon_path' => '',
+    'favicon_upload' => '',
+  );
+  $export['theme_settings'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
