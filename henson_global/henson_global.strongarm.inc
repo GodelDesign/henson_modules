@@ -1933,6 +1933,54 @@ function henson_global_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'uc_product_enable_nodes';
+  $strongarm->value = FALSE;
+  $export['uc_product_enable_nodes'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uc_product_field_enabled';
+  $strongarm->value = array(
+    'display_price' => 1,
+    'image' => 1,
+    'model' => 1,
+    'list_price' => 0,
+    'cost' => 0,
+    'sell_price' => 1,
+    'weight' => 1,
+    'dimensions' => 0,
+    'add_to_cart' => 1,
+  );
+  $export['uc_product_field_enabled'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uc_product_field_weight';
+  $strongarm->value = array(
+    'display_price' => '-10',
+    'image' => '-2',
+    'model' => '0',
+    'list_price' => '2',
+    'cost' => '3',
+    'sell_price' => '4',
+    'weight' => '5',
+    'dimensions' => '6',
+    'add_to_cart' => '10',
+  );
+  $export['uc_product_field_weight'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'uc_product_image_widget';
+  $strongarm->value = '';
+  $export['uc_product_image_widget'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'uc_product_shippable_product_class_cuffs';
   $strongarm->value = 1;
   $export['uc_product_shippable_product_class_cuffs'] = $strongarm;
