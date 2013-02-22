@@ -1,0 +1,19 @@
+<?php
+
+/**
+ *  Block users who have registered without orders placed.
+ */
+
+function henson_global_update_6101() {
+  $results = db_query("SELECT u.uid
+ FROM {users} u
+ LEFT JOIN {uc_orders} o ON o.uid = u.uid
+ WHERE order_id IS NULL
+ AND u.uid NOT IN (0, 1)
+ GROUP BY u.uid");
+  $users_to_block = array();
+  foreach($results as $row) {
+    $users_to_block[] = $row->uid;
+  }
+  user_user_operations_block($users_to_block);
+}
