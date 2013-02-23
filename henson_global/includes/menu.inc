@@ -7,7 +7,6 @@
 /**
  * Implements hook_menu().
  */
-
 function henson_global_menu_alter(&$items) {
   /* removing access to user/register to stop non-ubercart account signups */
   $items['user/register']['access callback'] = FALSE;

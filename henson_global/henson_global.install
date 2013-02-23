@@ -4,6 +4,9 @@
  *  Block users who have registered without orders placed.
  */
 
+/**
+ * Block all non-admin users with no order history.
+ */
 function henson_global_update_6101() {
   $results = db_query("SELECT u.uid
  FROM {users} u
@@ -11,9 +14,11 @@ function henson_global_update_6101() {
  WHERE order_id IS NULL
  AND u.uid NOT IN (0, 1)
  GROUP BY u.uid");
+
   $users_to_block = array();
-  foreach($results as $row) {
+  while($row = db_fetch_object($results)) {
     $users_to_block[] = $row->uid;
   }
   user_user_operations_block($users_to_block);
+  return array();
 }
